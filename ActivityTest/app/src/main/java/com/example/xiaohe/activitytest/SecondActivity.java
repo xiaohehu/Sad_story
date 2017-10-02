@@ -17,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("SecondActivity", this.toString());
         setContentView(R.layout.activity_second);
 
 
@@ -27,10 +28,12 @@ public class SecondActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.putExtra("data_return", "Hello FirstActivity");
-                setResult(RESULT_OK, intent);
-                finish();
+//                Intent intent = new Intent();
+//                intent.putExtra("data_return", "Hello FirstActivity");
+//                setResult(RESULT_OK, intent);
+//                finish();
+                Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+                startActivity(intent);
             }
 
         });
@@ -44,5 +47,11 @@ public class SecondActivity extends AppCompatActivity {
         setResult(RESULT_OK, intent);
         finish();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("SecondActivity", "==================onDestroy");
     }
 }

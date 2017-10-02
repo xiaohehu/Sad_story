@@ -19,6 +19,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        Log.d("FirstActivity", this.toString());
         setContentView(R.layout.first_layout);
 
         // Define a button with id button_1
@@ -44,9 +45,9 @@ public class FirstActivity extends AppCompatActivity {
 //                Intent intent = new Intent(Intent.ACTION_DIAL);
 //                intent.setData(Uri.parse("tel:10000"));
 
-//                startActivity(intent);
+                startActivity(intent);
 
-                startActivityForResult(intent, 1);
+//                startActivityForResult(intent, 1);
 
 //                finish();
 //                Intent intent = new Intent("com.example.activitytest.ACTION_START");
@@ -92,5 +93,11 @@ public class FirstActivity extends AppCompatActivity {
             default:
         }
         return true;
+    }
+
+    @Override
+    protected  void onRestart() {
+        super.onRestart();
+        Log.d("FirstActivity", "================onRestart");
     }
 }
