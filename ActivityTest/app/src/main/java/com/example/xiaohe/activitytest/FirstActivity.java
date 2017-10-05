@@ -19,7 +19,8 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        Log.d("FirstActivity", this.toString());
+//        Log.d("FirstActivity", this.toString());
+        Log.d("FirstActivity", "Task id is " + getTaskId());
         setContentView(R.layout.first_layout);
 
         // Define a button with id button_1

@@ -17,7 +17,8 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("SecondActivity", this.toString());
+//        Log.d("SecondActivity", this.toString());
+        Log.d("SecondActivity", "Task id is " + getTaskId());
         setContentView(R.layout.activity_second);
 
 
@@ -32,7 +33,8 @@ public class SecondActivity extends AppCompatActivity {
 //                intent.putExtra("data_return", "Hello FirstActivity");
 //                setResult(RESULT_OK, intent);
 //                finish();
-                Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+//                Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+                Intent intent = new Intent (SecondActivity.this, ThirdActivity.class);
                 startActivity(intent);
             }
 
