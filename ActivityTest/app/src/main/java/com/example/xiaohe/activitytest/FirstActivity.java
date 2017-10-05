@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,9 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick (View v) {
 //                Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_SHORT). show();
 
+                SecondActivity.actionStart(FirstActivity.this, "data1", "data2");
 
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+//                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 //                String data = "Hello SecondActivity";
 //                intent.putExtra("extra_data", data);
 
@@ -46,7 +47,7 @@ public class FirstActivity extends AppCompatActivity {
 //                Intent intent = new Intent(Intent.ACTION_DIAL);
 //                intent.setData(Uri.parse("tel:10000"));
 
-                startActivity(intent);
+//                startActivity(intent);
 
 //                startActivityForResult(intent, 1);
 
