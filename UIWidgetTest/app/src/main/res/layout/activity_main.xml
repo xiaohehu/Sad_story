@@ -26,6 +26,13 @@
         android:text="Button"
         android:textAllCaps="false"
         />
+    <EditText
+        android:id="@+id/exit_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type something here"
+        android:maxLines="2"
+        />
 
 
 </LinearLayout>
