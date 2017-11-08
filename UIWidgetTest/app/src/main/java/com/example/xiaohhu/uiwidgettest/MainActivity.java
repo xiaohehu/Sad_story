@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-// 如果用switch语句要改这个activity的extends
+// 如果用stestwitch语句要改这个activity的extends
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editText;
