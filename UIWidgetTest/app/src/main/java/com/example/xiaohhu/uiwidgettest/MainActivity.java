@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 // 如果用stestwitch语句要改这个activity的extends
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText editText;
     private ImageView imageView;
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = (Button) findViewById(R.id.button);
         imageView = (ImageView) findViewById(R.id.image_view);
         imageView.setTag(1);
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        button.setOnClickListener(this);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -40,13 +44,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                String inputText = editText.getText().toString();
 //                Toast.makeText(MainActivity.this, inputText, Toast.LENGTH_SHORT).show();
 //                imageView.setImageResource(R.drawable.image_2);
-                if ((Integer)imageView.getTag() == 1) {
-                    imageView.setTag(2);
-                    imageView.setImageResource(R.drawable.image_2);
-                } else {
-                    imageView.setTag(1);
-                    imageView.setImageResource(R.drawable.image_1);
-                }
+
+//                if ((Integer)imageView.getTag() == 1) {
+//                    imageView.setTag(2);
+//                    imageView.setImageResource(R.drawable.image_2);
+//                } else {
+//                    imageView.setTag(1);
+//                    imageView.setImageResource(R.drawable.image_1);
+//                }
+
+//                if (progressBar.getVisibility() == View.GONE) {
+//                    progressBar.setVisibility(View.VISIBLE);
+//                } else {
+//                    progressBar.setVisibility(View.GONE);
+//                }
+
+//                int progress = progressBar.getProgress();
+//                progress += 10;
+//                progressBar.setProgress(progress);
                 break;
             default:
                 break;
