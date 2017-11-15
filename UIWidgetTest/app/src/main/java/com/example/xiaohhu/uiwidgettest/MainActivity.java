@@ -1,5 +1,6 @@
 package com.example.xiaohhu.uiwidgettest;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Toast.makeText(MainActivity.this, inputText, Toast.LENGTH_SHORT).show();
 //                imageView.setImageResource(R.drawable.image_2);
 
+                // ImageView
 //                if ((Integer)imageView.getTag() == 1) {
 //                    imageView.setTag(2);
 //                    imageView.setImageResource(R.drawable.image_2);
@@ -61,27 +63,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    progressBar.setVisibility(View.GONE);
 //                }
 
+                // ProgressBar
 //                int progress = progressBar.getProgress();
 //                progress += 10;
 //                progressBar.setProgress(progress);
 
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setTitle("This is Dialog");
-                dialog.setMessage("Something important.");
-                dialog.setCancelable(false);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                // AlertDialog
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+//                dialog.setTitle("This is Dialog");
+//                dialog.setMessage("Something important.");
+//                dialog.setCancelable(false);
+//                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//                dialog.show();
 
-                    }
-                });
-                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                dialog.show();
+                // ProgressDialog
+                ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setTitle("This is ProgressDialog");
+                progressDialog.setMessage("Loading...");
+                progressDialog.setCancelable(true);
+                progressDialog.show();
                 break;
             default:
                 break;
