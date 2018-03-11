@@ -17,11 +17,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initFruits();//初始化水果数据
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        //----设置横向滑动---
-        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        //-----------------
-        recyclerView.setLayoutManager(layoutManager);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        //----设置横向滑动---
+//        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+//        //-----------------
+//        recyclerView.setLayoutManager(layoutManager);
+
+//        //---设置网格---
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+//        recyclerView.setLayoutManager(gridLayoutManager);
+//        //-------------
         FruitAdapter fruitAdapter = new FruitAdapter(fruitList);
         recyclerView.setAdapter(fruitAdapter);
     }
