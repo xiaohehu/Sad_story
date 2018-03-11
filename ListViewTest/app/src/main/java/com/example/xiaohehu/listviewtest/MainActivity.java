@@ -61,5 +61,5 @@ public class MainActivity extends AppCompatActivity {
                 Fruit mango = new Fruit("Mango", R.drawable.mango_pic);
                 fruitList.add(mango);
             }
-    }
+        }
 }
