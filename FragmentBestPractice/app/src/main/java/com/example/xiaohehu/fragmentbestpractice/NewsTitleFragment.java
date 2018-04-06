@@ -56,15 +56,16 @@ public class NewsTitleFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstaceState) {
-        Log.d("TAG", "onActivityCreated: 这个");
         super.onActivityCreated(savedInstaceState);
         if (getActivity().findViewById(R.id.news_content_layout) != null) {
+            Log.d("TAG", "onActivityCreated: 这个是平板");
             isTwoPane = true; //可以找到news_content_layout布局时，为双页模式
         } else {
             Log.d("TAG", "onActivityCreated: 这个是手机");
             isTwoPane = false; //找不到news_content_layout布局时，为单页模式
         }
     }
+
 
     class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         private List<News> mNewsList;
